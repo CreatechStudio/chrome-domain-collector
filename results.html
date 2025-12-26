@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>抓取结果</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 40px auto;
+            font-family: monospace;
+            padding: 20px;
+            background-color: #f3f4f6;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #111827;
+            font-size: 24px;
+        }
+
+        .status-bar {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .success {
+            background-color: #d1fae5;
+            color: #065f46;
+        }
+
+        textarea {
+            width: 100%;
+            height: 400px;
+            border: 1px solid #d1d5db;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .actions {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn-copy {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .btn-copy:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn-close {
+            background-color: #9ca3af;
+            color: white;
+        }
+
+        .btn-close:hover {
+            background-color: #6b7280;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>抓取到的域名列表</h1>
+        <div id="status" class="status-bar" style="display:none;"></div>
+
+        <textarea id="resultBox" readonly></textarea>
+
+        <div class="actions">
+            <button id="copyBtn" class="btn-copy">复制</button>
+            <button id="closeBtn" class="btn-close">关闭页面</button>
+        </div>
+    </div>
+    <script src="results.js"></script>
+</body>
+
+</html>

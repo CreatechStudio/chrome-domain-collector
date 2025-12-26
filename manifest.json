@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "域名抓取器 (Domain Extractor)",
+    "version": "1.0",
+    "description": "打开URL，记录请求域名，并复制到剪贴板。",
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "tabs",
+        "webRequest",
+        "storage",
+        "clipboardWrite"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "开始抓取"
+    }
+}
